@@ -18,8 +18,10 @@ __DEF_OS_LOCATIONS = {
     'darwin': [
       # MacPorts, port curl-ca-bundle
       '/opt/local/share/curl/curl-ca-bundle.crt',
-      # homebrew, package openssl
-      '/usr/local/etc/openssl/cert.pem',
+      # homebrew, package openssl, for macOS on Intel
+      '/usr/local/etc/ca-certificates/cert.pem',
+      # homebrew, package openssl, for macOS on Apple Silicon/ARM
+      '/opt/homebrew/etc/ca-certificates/cert.pem',
     ],
     'linux-ubuntu': '/etc/ssl/certs/ca-certificates.crt',
     'linux-debian': '/etc/ssl/certs/ca-certificates.crt',
